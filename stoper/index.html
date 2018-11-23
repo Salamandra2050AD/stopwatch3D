@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Stoper</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="scene">
+    <div class="casing">
+      <div class="casing__front casing__front--front--screenbg"></div>
+      <div class="casing__front casing__front--front--screen">
+        <div id="stoper">
+          <div class="stopwatch-wrapper">
+            <div class="stopwatch"></div>
+            <div class="stopwatch-bg">88:88:88</div>
+          </div>
+          <div class="results-wrapper">
+            <ul class="results screen"></ul>
+            <ul class="results-bg">
+              <li>88:88:88</li>
+              <li>88:88:88</li>
+              <li>88:88:88</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="casing__front casing__front--front--top">
+        <h1 style="font-size: 60px;margin: auto;">czaderski stoper 3D</h1>
+      </div>
+      <div class="casing__front casing__front--front--bottom">
+        <div class="nav-bg">
+          <div class="buttons-bg">
+            <div class="button-bg"></div>
+            <div class="button-bg"></div>
+            <div class="button-bg"></div>
+            <div class="button-bg"></div>
+            <div class="button-bg"></div>
+            <div class="button-bg"></div>
+          </div>
+          <div class="printer-bg"></div>
+        </div>
+      </div>
+      <div class="casing__nav-wrapper">
+        <nav>
+          <button id="start" onClick="stopwatch.start();">START
+            <span style="font-family: arial;font-weight: bold;">/</span> PAUZA
+          </button>
+          <button id="save" onClick="stopwatch.save();">ZAPISZ CZAS</button>
+          <button id="restart" onClick="stopwatch.restart();">RESTART</button>
+          <button id="print-times" onClick="stopwatch.print();">DRUKUJ</button>
+          <button id="zero" onClick="stopwatch.zero();">ZERUJ LICZNIK</button>
+          <button id="clear" onClick="stopwatch.clear();">ZERUJ CZASY</button>
+        </nav>
+        <div class="printer">
+          <div class="hole">
+            <a class="results-print" download="czasy.txt" onClick="stopwatch.ripOff()" role="list" title="Urwij"></a>
+          </div>
+        </div>
+      </div>
+      <div class="casing__front casing__front--front--left"></div>
+      <div class="casing__front casing__front--front--right"></div>
+      <div class="casing__back casing__back--back"></div>
+      <div class="casing__side casing__side--right"></div>
+      <div class="casing__side casing__side--left"></div>
+      <div class="casing__lid casing__lid--top"></div>
+      <div class="casing__lid casing__lid--bottom"></div>
+      <div class="casing__lid casing__lid--innertop"></div>
+      <div class="casing__lid casing__lid--innerbottom"></div>
+      <div class="casing__back casing__back--inside"></div>
+
+      <div class="casing__button-long casing__button-long--left1top"></div>
+      <div class="casing__button-long casing__button-long--left2top"></div>
+      <div class="casing__button-long casing__button-long--left3top"></div>
+      <div class="casing__button-long casing__button-long--left1bottom"></div>
+      <div class="casing__button-long casing__button-long--left2bottom"></div>
+      <div class="casing__button-long casing__button-long--left3bottom"></div>
+      <div class="casing__button-long casing__button-long--right1top"></div>
+      <div class="casing__button-long casing__button-long--right2top"></div>
+      <div class="casing__button-long casing__button-long--right3top"></div>
+      <div class="casing__button-long casing__button-long--right1bottom"></div>
+      <div class="casing__button-long casing__button-long--right2bottom"></div>
+      <div class="casing__button-long casing__button-long--right3bottom"></div>
+
+      <div class="casing__button-short casing__button-short--left1left"></div>
+      <div class="casing__button-short casing__button-short--left2left"></div>
+      <div class="casing__button-short casing__button-short--left3left"></div>
+      <div class="casing__button-short casing__button-short--left1right"></div>
+      <div class="casing__button-short casing__button-short--left2right"></div>
+      <div class="casing__button-short casing__button-short--left3right"></div>
+      <div class="casing__button-short casing__button-short--right1left"></div>
+      <div class="casing__button-short casing__button-short--right2left"></div>
+      <div class="casing__button-short casing__button-short--right3left"></div>
+      <div class="casing__button-short casing__button-short--right1right"></div>
+      <div class="casing__button-short casing__button-short--right2right"></div>
+      <div class="casing__button-short casing__button-short--right3right"></div>
+
+      <div class="casing__printer-short"></div>
+      <div class="casing__printer-inside"></div>
+      <div class="casing__printer-long casing__printer-long--top"></div>      
+      <div class="casing__printer-long casing__printer-long--middle"></div>      
+      <div class="casing__printer-long casing__printer-long--bottom"></div>      
+
+      <div class="casing__leg casing__leg--leftbottom"></div>
+      <div class="casing__leg casing__leg--leftbottom-left"></div>
+      <div class="casing__leg casing__leg--leftbottom-right"></div>
+      <div class="casing__leg casing__leg--leftbottom-top"></div>
+      <div class="casing__leg casing__leg--leftbottom-bottom"></div>
+
+      <div class="casing__leg casing__leg--rightbottom"></div>
+      <div class="casing__leg casing__leg--rightbottom-left"></div>
+      <div class="casing__leg casing__leg--rightbottom-right"></div>
+      <div class="casing__leg casing__leg--rightbottom-top"></div>
+      <div class="casing__leg casing__leg--rightbottom-bottom"></div>
+
+      <div class="casing__leg casing__leg--lefttop"></div>
+      <div class="casing__leg casing__leg--lefttop-left"></div>
+      <div class="casing__leg casing__leg--lefttop-right"></div>
+      <div class="casing__leg casing__leg--lefttop-top"></div>
+      <div class="casing__leg casing__leg--lefttop-bottom"></div>
+
+      <div class="casing__leg casing__leg--righttop"></div>
+      <div class="casing__leg casing__leg--righttop-left"></div>
+      <div class="casing__leg casing__leg--righttop-right"></div>
+      <div class="casing__leg casing__leg--righttop-top"></div>
+      <div class="casing__leg casing__leg--righttop-bottom"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
